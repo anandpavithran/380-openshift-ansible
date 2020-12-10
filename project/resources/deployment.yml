@@ -1,0 +1,21 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata:
+  name: hello
+  namespace: devops200
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+            - image: quay.io/anandpavithran/infosys:1.0
+              name: hello
+              ports:
+               - containerPort: 8080
+                 protocol: TCP
