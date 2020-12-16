@@ -2,22 +2,22 @@
 - name: Demo of ansible playbook to automate tasks in Openshift
   hosts: all
   vars:
-   myuser: anand-pavithran
-   mypass: 792101323cd74a35a104
-   api_url: https://api.ap45.prod.nextcle.com:6443
+   myuser: admin
+   mypass: redhat
+   api_url: https://api.ocp4.example.com:6443
    namespace: devops200
   module_defaults:
    group/k8s:
    namespace: "{{ namespace }}"
    host: "{{api_url}}"
-   validate_certs: true 
+   validate_certs: false
   tasks:
    - name: Login to openshift
      k8s_auth:
       host: "{{api_url}}"
       username: "{{myuser}}"
       password: "{{mypass}}"
-      validate_certs: true
+      validate_certs: false
      register: k8s_auth_results
    - name: Get a info about Pods that are hello apps in dev or test
      k8s_info:

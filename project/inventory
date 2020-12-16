@@ -1,1 +1,1 @@
-localhost ansible_python_interpreter=/root/380-openshift-ansible/venv/openshift/bin/python ansible_connection=local
+localhost ansible_python_interpreter=/home/student/380-openshift-ansible/venv/openshift/bin/python ansible_connection=local
