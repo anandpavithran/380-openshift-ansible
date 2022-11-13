@@ -46,7 +46,7 @@
         replicas: 5
     - name: Ensure a route exists
       redhat.openshift.openshift_route: 
-        service: intranet-front-svc
+        service: hello
       register: route
     - name: Ensure the route is displayed
       debug:
