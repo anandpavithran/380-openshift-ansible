@@ -25,7 +25,7 @@
         resource_definition:
           apiVersion: project.openshift.io/v1    
         kind: Project
-       metadata:
+        metadata:
           name: intranet-front  
     - name: Ensure the intranet front end is deployed
       redhat.openshift.k8s:
