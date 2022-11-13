@@ -42,7 +42,7 @@
     - name: Ensure the deployments is scaled up
       kubernetes.core.k8s_scale:
         kind: Deployment
-        name: intranet-front
+        name: hello
         replicas: 5
     - name: Ensure a route exists
       redhat.openshift.openshift_route: 
